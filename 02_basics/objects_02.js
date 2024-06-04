@@ -53,3 +53,16 @@ console.log(userList[1].name)
 console.log(Object.keys(obj1))
 console.log(Object.values(obj1))
 console.log(obj1.hasOwnProperty("name"))//to check a property
+
+// *********Destructuring of object************
+const objToDest = {
+
+    coursename:"JS",
+    courseInstructor:"JS Documnetation MDN",
+    fees:0
+}
+
+const {courseInstructor:instructor} = objToDest
+const {coursename} = objToDest
+console.log(instructor);
+console.log(coursename);
