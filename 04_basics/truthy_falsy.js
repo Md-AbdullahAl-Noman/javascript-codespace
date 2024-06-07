@@ -52,3 +52,23 @@ if(Object.keys(myObj1).length===0)
         console.log("Not an empty object");
     }
     // console.log(Object.keys(myObj1));
+
+    // ******************Nullish coalescing operator****************
+
+    /*Nullish caolescing operator is a conditional operator ?? that returns it right-hand side operand when the left-hand side operand is null or undefined otherwise returns the left-hand side operands */
+ let var1 = null ?? "Right side should be printed"
+ console.log(var1);
+ 
+ 
+ let var2 = undefined ?? "Right side should be printed as left is undefined"
+ console.log(var2);
+ 
+ 
+ let var3 = 0 ?? "Left side should be printed as right  is neither undefined nor null"
+ console.log(var3);//here right operand will be printed
+
+//  **************Ternary operator***************
+
+const con1 = true
+console.log(con1?"This is for true":"This is for false")
+ 
