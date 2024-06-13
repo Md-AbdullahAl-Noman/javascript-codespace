@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dom 2Document</title>
+  </head>
+  <body style="background: #000; color: white">
+    <div class="parent">
+      <div class="days">Sunday</div>
+      <div class="days">Monday</div>
+      <div class="days">Tuesday</div>
+      <div class="days">Wednesday</div>
+      <div class="days">Thursday</div>
+    </div>
+  </body>
+  <script>
+    // const parent1=document.querySelector('.parent')
+    // console.log(parent1);
+    // console.log(parent1.children);
+
+    // for (let index = 0; index < parent1.length; index++) {
+    //     const element = parent1.children[index];
+
+    //     console.log(element.innerHTML);
+
+    // }
+    const parent2 = document.getElementsByClassName("parent");
+    // console.log(parent2);
+    // for (let index = 0; index < parent2.length; index++) {
+    //   const items = parent2[index];
+
+    //   console.log(items.children);
+    // }
+
+    const parent3=document.querySelector(".parent")
+
+    // console.log(parent3.children)
+    parent3.children[1].style.color="orange"
+    // parent3.firstElementChild.style.color="red"
+    // console.log(parent3.firstElementChild)
+    // console.log(parent3.lastElementChild);
+
+    const dayOne = document.querySelector(".days")
+    // console.log(dayOne);
+    // console.log(dayOne.parentElement)//the parent  class div
+
+    // console.log(dayOne.nextElementSibling);
+    // dayOne.style.color="blue"
+
+    console.log("All Nodes",parent3.childNodes);
+
+  </script>
+</html>
