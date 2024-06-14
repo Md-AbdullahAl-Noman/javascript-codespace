@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document || Dom Manipulation||Creation of elements</title>
+</head>
+<body style="background-color: black;color: white;">
+    
+</body>
+<script>
+    const div=document.createElement('div')
+    console.log(div);
+    div.setAttribute("title","div tag")
+    div.calssName="div class"
+    div.style.color="Yellow"
+    div.id=Math.round(Math.random()*10+1)
+    div.style.backgroundColor="Blue"
+    div.innerText="Noman"
+    const text = document.createTextNode("Abdullah")
+    
+    div.appendChild(text)
+
+    document.body.appendChild(div)
+    console.log(div);
+</script>
+</html>
