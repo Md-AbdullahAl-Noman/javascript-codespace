@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document || Dom edit ||Remove</title>
+</head>
+<body style="background-color: black;color: white;"> 
+    <ul class="List">
+        <li>Javascript</li>
+
+    </ul>
+</body>
+<script>
+
+    function editElement (lang){
+        const elementToAdd = document.querySelector(".List")
+        //create
+        const li = document.createElement("li")
+        li.innerHTML=`${lang}`
+
+        elementToAdd.appendChild(li)
+
+    }
+    editElement("Python")
+    editElement("CPP")
+
+    function optForm(langName){
+        const li = document.createElement("li")
+        li.appendChild(document.createTextNode(`${langName}`))
+        document.querySelector(".List").appendChild(li)
+
+    }
+    optForm("React")
+
+    //edit
+
+    const toEdit = document.querySelector("li:nth-child(3)")
+    // console.log(toEdit);
+    const toReplace = document.createElement("li")
+    toReplace.textContent="Next JS"
+    toEdit.replaceWith(toReplace)
+
+    //or
+
+    const lastLang = document.querySelector("li:last-child")
+    lastLang.outerHTML='<li>Angular</li>'
+    
+    //remove
+
+    const firstLang = document.querySelector("li:first-child")
+    firstLang.remove()
+
+</script>
+</html>
