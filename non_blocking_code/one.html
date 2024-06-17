@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document||Async</title>
+</head>
+<body style="background-color: black;color: white;">
+    <h1>Hey code with me!</h1>
+    <h2 id="h2">This is h2 tag!</h2>
+    <button>Stop</button>
+    <button id="b2">Stop Repetition</button>
+</body>
+
+<script>
+  const h1=document.querySelector("h1")
+  const button = document.querySelector("button")
+  const h2 = document.querySelector("#h2")
+  const button2 = document.querySelector("#b2")
+//   console.log(button);
+//   console.log(h1);
+
+ const toStop= setTimeout(function(){
+    h1.textContent="Learning Js"
+ },2000)
+
+ button.addEventListener('click',function(){
+    clearTimeout(toStop)
+ })
+
+
+ const h2Change = setInterval(function(){
+    h2.innerHTML="h2 will change after 3s"
+ },3000)
+ setInterval(function(){
+    h2.innerHTML="This is h2 tag!"
+ },5000)
+
+button2.addEventListener('click',()=>{
+    clearInterval(h2Change)
+})
+</script>
+</html> 
